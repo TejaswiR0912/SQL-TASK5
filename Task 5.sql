@@ -41,6 +41,6 @@ SELECT c.c_name, o.o_item
 FROM customers c
 left JOIN orders o ON c.Acc_no = o.acc_no;
 
-SELECT c.c_name, o.o_item
-FROM customers c
-FULL JOIN orders o ON c.Acc_no = o.acc_no;
+SELECT c_name,acc_no from customers
+union
+select o_item,acc_no from orders;
